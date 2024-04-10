@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace StudentManagementApi.Models
 {
-    public class AppDbcontext : DbContext
+    public class AppDbcontext : IdentityDbContext<User>
     {
         public AppDbcontext(DbContextOptions options) : base(options)
         {

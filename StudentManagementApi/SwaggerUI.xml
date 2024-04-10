@@ -4,6 +4,23 @@
         <name>StudentManagementApi</name>
     </assembly>
     <members>
+        <member name="M:StudentManagementApi.Controllers.AuthenticationController.RegisterUser(StudentManagementApi.Dto.AccountRegisterDto)">
+            <summary>
+            Register user
+            </summary>
+            <param name="userForRegistration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StudentManagementApi.Controllers.AuthenticationController.Login(StudentManagementApi.Dto.LoginDto)">
+            <summary>
+            Login
+            </summary>
+            <param name="loginUser"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StudentManagementApi.Controllers.AuthenticationController.CreateToken(StudentManagementApi.Models.User)">
+            methods for token
+        </member>
         <member name="M:StudentManagementApi.Controllers.StudentsController.GetAllStudents(StudentManagementApi.RequestFeatures.StudentParameters)">
             <summary>
             Get All Students
@@ -62,6 +79,18 @@
             <inheritdoc />
         </member>
         <member name="M:StudentManagementApi.Migrations.DropAgeColumn.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:StudentManagementApi.Migrations.AddIdentityTables">
+            <inheritdoc />
+        </member>
+        <member name="M:StudentManagementApi.Migrations.AddIdentityTables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:StudentManagementApi.Migrations.AddIdentityTables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:StudentManagementApi.Migrations.AddIdentityTables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>

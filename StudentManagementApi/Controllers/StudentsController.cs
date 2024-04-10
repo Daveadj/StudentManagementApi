@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using StudentManagementApi.Contracts;
 using StudentManagementApi.Dto;
 using StudentManagementApi.Mappings;
@@ -35,7 +36,7 @@ namespace StudentManagementApi.Controllers
         /// </summary>
         /// <param name="studentDto"></param>
         /// <returns></returns>
-
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> AddStudent([FromBody] AddStudentDto studentDto)
         {
@@ -70,7 +71,7 @@ namespace StudentManagementApi.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveStudent(int id)
         {
@@ -89,7 +90,7 @@ namespace StudentManagementApi.Controllers
         /// <param name="id"></param>
         /// <param name="studentDto"></param>
         /// <returns></returns>
-
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateStudentDetails(int id, [FromBody] AddStudentDto studentDto)
         {
