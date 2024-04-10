@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StudentManagementApi</name>
+    </assembly>
+    <members>
+        <member name="M:StudentManagementApi.Controllers.StudentsController.GetAllStudents(StudentManagementApi.RequestFeatures.StudentParameters)">
+            <summary>
+            Get All Students
+            </summary>
+            <param name="studentParameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StudentManagementApi.Controllers.StudentsController.AddStudent(StudentManagementApi.Dto.AddStudentDto)">
+            <summary>
+            Add Student
+            </summary>
+            <param name="studentDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StudentManagementApi.Controllers.StudentsController.GetStudentById(System.Int32)">
+            <summary>
+            Get Student By Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StudentManagementApi.Controllers.StudentsController.RemoveStudent(System.Int32)">
+            <summary>
+            Delete Student Details
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StudentManagementApi.Controllers.StudentsController.UpdateStudentDetails(System.Int32,StudentManagementApi.Dto.AddStudentDto)">
+            <summary>
+            Update Student Details
+            </summary>
+            <param name="id"></param>
+            <param name="studentDto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:StudentManagementApi.Migrations.InitialMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:StudentManagementApi.Migrations.InitialMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:StudentManagementApi.Migrations.InitialMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:StudentManagementApi.Migrations.InitialMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:StudentManagementApi.Migrations.DropAgeColumn">
+            <inheritdoc />
+        </member>
+        <member name="M:StudentManagementApi.Migrations.DropAgeColumn.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:StudentManagementApi.Migrations.DropAgeColumn.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:StudentManagementApi.Migrations.DropAgeColumn.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
