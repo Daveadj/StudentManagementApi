@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Serilog;
 using StudentManagementApi.Contracts;
 using StudentManagementApi.Extension;
 using StudentManagementApi.Models;
@@ -77,6 +78,9 @@ builder.Services.AddSwaggerGen(c =>
     c.IncludeXmlComments(Path.Combine(System.AppContext.BaseDirectory, "SwaggerUI.xml"));
 });
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(builder.Configuration).CreateLogger();
+
+builder.Host.UseSerilog();
 
 var app = builder.Build();
 
@@ -86,6 +90,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 // Configure the HTTP request pipeline.
+
+app.UseSerilogRequestLogging();
 
 app.ConfigureExceptionHandler(app.Services.GetRequiredService<ILogger<Program>>());
 

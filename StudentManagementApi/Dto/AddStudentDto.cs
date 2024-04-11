@@ -30,10 +30,25 @@ namespace StudentManagementApi.Dto
         public string PhoneNumber { get; set; }
 
         [Required]
-        [RegularExpression("^(male|female)$", ErrorMessage = "Gender must be either 'male' or 'female'.")]
+        [Gender(ErrorMessage = "Gender must be either 'male' or 'female'.")]
         public string Gender { get; set; }
 
         [Required]
         public string Address { get; set; }
+    }
+
+    public class GenderAttribute : ValidationAttribute
+    {
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        {
+            string gender = value as string;
+
+            if (gender != null && (gender.ToLower() == "male" || gender.ToLower() == "female"))
+            {
+                return ValidationResult.Success;
+            }
+
+            return new ValidationResult("Gender must be either 'male' or 'female'.");
+        }
     }
 }

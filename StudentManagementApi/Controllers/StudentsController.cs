@@ -12,10 +12,12 @@ namespace StudentManagementApi.Controllers
     public class StudentsController : ControllerBase
     {
         private readonly IStudentRepository _studentRepository;
+        private readonly ILogger<StudentsController> _logger;
 
-        public StudentsController(IStudentRepository studentRepository)
+        public StudentsController(IStudentRepository studentRepository, ILogger<StudentsController> logger)
         {
             _studentRepository = studentRepository;
+            _logger = logger;
         }
 
         /// <summary>
@@ -42,6 +44,7 @@ namespace StudentManagementApi.Controllers
         {
             if (!ModelState.IsValid)
             {
+                _logger.LogError($"{ModelState}");
                 return BadRequest(ModelState);
             }
             var newStudent = studentDto.MapDtoToStudentClass();
@@ -61,6 +64,7 @@ namespace StudentManagementApi.Controllers
             var student = await _studentRepository.GetStudentById(id);
             if (student == null)
             {
+                _logger.LogInformation($"Student with id: {id} doesn't exist in the database.");
                 return NotFound();
             }
             return Ok(student);
@@ -78,6 +82,7 @@ namespace StudentManagementApi.Controllers
             var student = await _studentRepository.GetStudentById(id);
             if (student == null)
             {
+                _logger.LogInformation($"Student with id: {id} doesn't exist in the database.");
                 return NotFound();
             }
             await _studentRepository.DeleteStudent(student.Id);
@@ -97,6 +102,7 @@ namespace StudentManagementApi.Controllers
             var student = await _studentRepository.GetStudentById(id);
             if (student == null)
             {
+                _logger.LogInformation($"Student with id: {id} doesn't exist in the database.");
                 return NotFound();
             }
 
