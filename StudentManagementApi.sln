@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentManagementApi", "StudentManagementApi\StudentManagementApi.csproj", "{B97CAF22-A3D0-4CFE-9D7D-B0769F53ED07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentManagementApi", "StudentManagementApi\StudentManagementApi.csproj", "{B97CAF22-A3D0-4CFE-9D7D-B0769F53ED07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentManagementApi.Tests", "StudentManagementApi.Tests\StudentManagementApi.Tests.csproj", "{BC722C75-DEBD-416C-873C-690968687D51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B97CAF22-A3D0-4CFE-9D7D-B0769F53ED07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B97CAF22-A3D0-4CFE-9D7D-B0769F53ED07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B97CAF22-A3D0-4CFE-9D7D-B0769F53ED07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC722C75-DEBD-416C-873C-690968687D51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC722C75-DEBD-416C-873C-690968687D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC722C75-DEBD-416C-873C-690968687D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC722C75-DEBD-416C-873C-690968687D51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
